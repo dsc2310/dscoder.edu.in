@@ -16,6 +16,12 @@
 </head>
 
 <body>
+    <div class="loader-mask">
+        <div class="loader">
+           <div></div>
+           <div></div>
+        </div>
+     </div>
     <header class="header" id="header">
         <section class="wrapper container">
             <a href="index.html" class="brand">DS CODER</a>
@@ -253,6 +259,40 @@
             <h1 class="postcard__title blue" style="text-align: center;">More Recent Post For You</h1>
 
             <article class="postcard light blue">
+                <a class="postcard__img_link" href="footer.html">
+                   <img class="postcard__img" src="img/responsive footer.JPG" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                   <div class="type">
+                      <li class="type_bg"><a href="html.html">HTML</a></li>
+                      <li class="type_bg"><a href="css.html">CSS</a></li>
+                   </div>
+                   <h1 class="postcard__title blue"><a href="footer.html">Responsive Footer Using Html Css</a></h1>
+                   <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                         &nbsp;&nbsp;&nbsp;<i class='fa fa-user-circle'></i> By Divakar Rajput
+                         <i class="fas fa-calendar-alt mr-2"></i>
+                         &nbsp;&nbsp;<i class="	fa fa-calendar"></i> 02 July 2023
+                         &nbsp;&nbsp;<i class="	fa fa-clock-o"></i> 10:30PM
+                         &nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i> 880
+                      </time>
+                   </div>
+                   <div class="postcard__bar"></div>
+                   <div class="postcard__preview-txt">Have you ever wanted to create Responsive footer? In this post, we
+                      will learn how to design and implement a responsive footer Form using HTML, and CSS. So, let’s get
+                      started!</div>
+                   <ul class="postcard__tagbox">
+                      <a href="footer.html">
+                         <li class="tag__item"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;READ MORE</li>
+                      </a>
+                      <a href="https://www.youtube.com/@DS_CODER_">
+                         <li class="tag__item1"><i class="fa fa-youtube-play"></i>&nbsp;&nbsp;SUBSCRIBE</li>
+                      </a>
+                   </ul>
+                </div>
+             </article>
+
+            <article class="postcard light blue">
                 <a class="postcard__img_link" href="Analog Clock with Sound in HTML – CSS – JS.html">
                     <img class="postcard__img" src="img/1.png" alt="Image Title" />
                 </a>
@@ -346,13 +386,8 @@
             </div>
         </div>
     </footer>
-    <div class="preloder" id="loader">
-        <div class="circle1">
-            <div class="circle2"></div>
-        </div>
-    </div>
-
-
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
     <script src="script.js"></script>
 
 </body>

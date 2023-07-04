@@ -51,19 +51,15 @@ const resizeWindow = () => {
    }
 };
 
+$(window).load(function () {
+   // Preloader
+   $('.loader').fadeOut();
+   $('.loader-mask').delay(350).fadeOut('slow');
+});
+
 // Initialize Event Listeners
 burgerMenu.addEventListener("click", toggleMenu);
 overlayMenu.addEventListener("click", toggleMenu);
 navbarMenu.addEventListener("click", toggleSubMenu);
 window.addEventListener("resize", resizeWindow);
 
-
-
-
-
-
-var preloder = document.getElementById('loader');
-
-function myFunction() {
-   preloder.style.display = 'none';
-}
