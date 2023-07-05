@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DS CODER</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script type="module"
+    src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+  <link rel="stylesheet" href="css/page.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <div class="loader-mask">
+    <div class="loader">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <header class="header" id="header">
+    <section class="wrapper container">
+      <a href="index.html" class="brand">DS CODER</a>
+      <div class="burger" id="burger">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </div>
+      <span class="overlay"></span>
+      <nav class="navbar" id="navbar">
+        <ul class="menu" id="menu">
+          <li class="menu-item"><a href="index.html" class="menu-link">HOME</a></li>
+          <li class="menu-item"><a href="wordpress.html" class="menu-link">WORDPRESS</a></li>
+          <li class="menu-item"><a href="elementor" class="menu-link">ELEMENTOR</a></li>
+          <li class="menu-item"><a href="html.html" class="menu-link">HTML</a></li>
+          <li class="menu-item"><a href="css.html" class="menu-link">CSS</a></li>
+          <li class="menu-item"><a href="js.html" class="menu-link">JQUERY</a></li>
+
+        </ul>
+
+      </nav>
+    </section>
+  </header>
+  <div class="trackline">
+    <li class="track"><a href="index.html">HOME</a></li> &nbsp;/&nbsp;
+    <li class="track"><a href="html.html">JQUERY</a></li>&nbsp;/&nbsp;
+    <li class="track_active"><a href="">
+        YouTube Video Thumbnail Downloader PHP & Js
+      </a></li>
+  </div>
+  <div class="content">
+    <div class="contentbox">
+      <div class="type">
+        <li class="type_bg"><a href="html.html">PHP</a></li>
+        <li class="type_bg"><a href="js.html">JavaScript</a></li>
+      </div>
+      <h1 class="postcard__title blue">
+        YouTube Video Thumbnail Downloader PHP & Js</h1>
+      <div class="postcard__subtitle small">
+        <time datetime="2020-05-25 12:00:00">
+          &nbsp;&nbsp;&nbsp;<i class='fa fa-user-circle'></i>&nbsp;&nbsp; By Divakar Rajput
+          <i class="fas fa-calendar-alt mr-2"></i>
+          &nbsp;&nbsp;<i class="	fa fa-calendar"></i>&nbsp;&nbsp; 05 July 2023
+          &nbsp;&nbsp;<i class="	fa fa-clock-o"></i>&nbsp;&nbsp; 3:45AM
+          &nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;&nbsp; 2k+
+        </time>
+      </div>
+      <div class="download-container1" style="margin-top: 20px;">
+        <h3 style="padding-bottom: 10px;">Share this page on</h3>
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="#" data-a2a-title="@">
+          <a class="a2a_button_copy_link" title="Copy Link"></a>
+          <a class="a2a_button_whatsapp" title="Share On Whatsapp"></a>
+          <a class="a2a_button_facebook" title="Share On Facebook"></a>
+          <a class="a2a_button_twitter" title="Share On Twitter"></a>
+          <a class="a2a_button_linkedin" title="Share On Linkedin"></a>
+          <a class="a2a_button_telegram" title="Share On telegram"></a>
+          <a class="a2a_button_blogger" title="Blogger"></a>
+        </div>
+        <script>
+          var a2a_config = a2a_config || {};
+          a2a_config.onclick = 1;
+          a2a_config.num_services = 4;
+        </script>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+      </div>
+      <img src="img/youtube downloder.jpg" style="width: 80%;">
+      <h2>Introduction</h2>
+      <p>In this project [Download YouTube Video Thumbnail], you can see in the image preview a white box or form
+        with an input field, image preview area, and a download button. Download button is disabled until you
+        paste a valid YouTube video URL or other image file URL.
+
+        When you paste YouTube video URL immediately, there appears a preview of the thumbnail of that video and
+        you can download it. This thumbnail downloader accepts all types of YouTube video URLs means long or
+        short URLs of the videos. And it also accepts any other image file like .jpg, .jepg, .png, .gif, and
+        .webp.</p>
+      <h2>1. What is YouTube Video Thumbnail Downloader?</h2>
+      <p>A YouTube Video Thumbnail Downloader is a youtube video thumbnail extracer and youtube video downloader
+        by using video link. when you paste the copy URL in input field
+        this tool scan the link and show youtube video thumbnail. you can download this thamnail and save your
+        device.
+      </p>
+      <h3><strong style="color: red;">Note : </strong>To create high this program [Download YouTube Video
+        Thumbnail]. First, you need to create two Files one PHP File and another one is CSS File. After creating
+        these files just paste the following codes into your file. First, create a PHP file with the name of
+        index.php and paste the given codes into your PHP file. Remember, you’ve to create a file with .php
+        extension.</h3>
+      <h2>2. Setting Up the HTML Structure</h2>
+      <p>To start, we’ll create the basic HTML structure & File Formate <b>(.php)</b> for our YouTube Video
+        Thumbnail Downloader.</p>
+      <div class="highlight" style="width: 100%; margin: auto;margin-top: 20px;">
+        <deckgo-highlight-code language="html">
+          <code slot="code">
+
+                        &lt;?php
+                        if(isset($_POST['button'])){
+                          $imgUrl = $_POST['imgurl'];
+                          $ch = curl_init($imgUrl);
+                          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                          $downloadImg = curl_exec($ch);
+                          curl_close($ch);
+                          header('Content-type: image/jpg');
+                          header('Content-Disposition: attachment;filename="thumbnail.jpg"');
+                          echo $downloadImg;
+                        }
+                      ?>
+                      &lt;!DOCTYPE html>
+                      &lt;!-- Coding By Ds Coder - youtube.com/@DS_CODER_ -->
+                      &lt;html lang="en">
+                      &lt;head>
+                        &lt;meta charset="UTF-8">
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        &lt;title>Download YouTube Video Thumbnail | CodingNepal&lt;/title>
+                        &lt;link rel="stylesheet" href="style.css">
+                        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+                      &lt;/head>
+                      &lt;body>
+                        &lt;form action="&lt;?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                          &lt;header>Download Thumbnail&lt;/header>
+                          &lt;div class="url-input">
+                            &lt;span class="title">Paste video url:&lt;/span>
+                            &lt;div class="field">
+                              &lt;input type="text" placeholder="https://www.youtube.com/watch?v=lqwdD2ivIbM" required>
+                              &lt;input class="hidden-input" type="hidden" name="imgurl">
+                              &lt;span class="bottom-line">&lt;/span>
+                            &lt;/div>
+                          &lt;/div>
+                          &lt;div class="preview-area">
+                            &lt;img class="thumbnail" src="" alt="">
+                            &lt;i class="icon fas fa-cloud-download-alt">&lt;/i>
+                            &lt;span>Paste video url to see preview&lt;/span>
+                          &lt;/div>
+                          &lt;button class="download-btn" type="submit" name="button">Download Thumbnail&lt;/button>
+                        &lt;/form>
+                      
+                        &lt;script>
+                          const urlField = document.querySelector(".field input"),
+                          previewArea = document.querySelector(".preview-area"),
+                          imgTag = previewArea.querySelector(".thumbnail"),
+                          hiddenInput = document.querySelector(".hidden-input"),
+                          button = document.querySelector(".download-btn");
+                      
+                          urlField.onkeyup = ()=>{
+                            let imgUrl = urlField.value;
+                            previewArea.classList.add("active");
+                            button.style.pointerEvents = "auto";
+                            if(imgUrl.indexOf("https://www.youtube.com/watch?v=") != -1){
+                              let vidId = imgUrl.split('v=')[1].substring(0, 11);
+                              let ytImgUrl = `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`;
+                              imgTag.src = ytImgUrl;
+                            }else if(imgUrl.indexOf("https://youtu.be/") != -1){
+                              let vidId = imgUrl.split('be/')[1].substring(0, 11);
+                              let ytImgUrl = `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`;
+                              imgTag.src = ytImgUrl;
+                            }else if(imgUrl.match(/\.(jpe?g|png|gif|bmp|webp)$/i)){
+                              imgTag.src = imgUrl;
+                            }else{
+                              imgTag.src = "";
+                              button.style.pointerEvents = "none";
+                              previewArea.classList.remove("active");
+                            }
+                            hiddenInput.value = imgTag.src;
+                          }
+                        &lt;/script>
+                      
+                      &lt;/body>
+                      &lt;/html>
+                      
+            </code>
+        </deckgo-highlight-code>
+      </div>
+
+      <h2>3. Styling the YouTube Video Thumbnail Downloader with CSS</h2>
+      <p>Next, we’ll style our YouTube Video Thumbnail Downloader using CSS. We’ll also import the Google Fonts
+        “Poppins” so that the
+        fonts look nicer.</p>
+      <div class="highlight" style="width: 100%; margin: auto;margin-top: 20px;">
+        <deckgo-highlight-code language="css">
+          <code slot="code">
+                        /* Import Google font - Poppins & Noto */
+                        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+                        *{
+                          margin: 0;
+                          padding: 0;
+                          box-sizing: border-box;
+                          font-family: "Poppins", sans-serif;
+                        }
+                        body{
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          min-height: 100vh;
+                          background: #7D2AE8;
+                        }
+                        ::selection{
+                          color: #fff;
+                          background: #7D2AE8;
+                        }
+                        form{
+                          width: 450px;
+                          background: #fff;
+                          padding: 30px ;
+                          border-radius: 5px;
+                          box-shadow: 10px 10px 13px rgba(0,0,0,0.1);
+                        }
+                        form header{
+                          text-align: center;
+                          font-size: 28px;
+                          font-weight: 500;
+                          margin-top: 10px;
+                          color: #7D2AE8;
+                        }
+                        form .url-input{
+                          margin: 30px 0;
+                        }
+                        .url-input .title{
+                          font-size: 18px;
+                          color: #373737;
+                        }
+                        .url-input .field{
+                          margin-top: 5px;
+                          height: 50px;
+                          width: 100%;
+                          position: relative;
+                        }
+                        .url-input .field input{
+                          height: 100%;
+                          width: 100%;
+                          border: none;
+                          outline: none;
+                          padding: 0 15px;
+                          font-size: 15px;
+                          background: #F1F1F7;
+                          border-bottom: 2px solid #ccc;
+                          font-family: 'Noto Sans', sans-serif;
+                        }
+                        .url-input .field input::placeholder{
+                          color: #b3b3b3;
+                        }
+                        .url-input .field .bottom-line{
+                          position: absolute;
+                          left: 0;
+                          bottom: 0;
+                          height: 2px;
+                          width: 100%;
+                          background: #7D2AE8;
+                          transform: scale(0);
+                          transition: transform 0.3s ease;
+                        }
+                        .url-input .field input:focus ~ .bottom-line,
+                        .url-input .field input:valid ~ .bottom-line{
+                          transform: scale(1);
+                        }
+                        form .preview-area{
+                          border-radius: 5px;
+                          height: 220px;
+                          display: flex;
+                          overflow: hidden;
+                          align-items: center;
+                          justify-content: center;
+                          flex-direction: column;
+                          border: 2px dashed #8e46ec;
+                        }
+                        .preview-area.active{
+                          border: none;
+                        }
+                        .preview-area .thumbnail{
+                          width: 100%;
+                          display: none;
+                          border-radius: 5px;
+                        }
+                        .preview-area.active .thumbnail{
+                          display: block;
+                        }
+                        .preview-area.active .icon,
+                        .preview-area.active span{
+                          display: none;
+                        }
+                        .preview-area .icon{
+                          color: #8e46ec;
+                          font-size: 80px;
+                        }
+                        .preview-area span{
+                          color: #8e46ec;
+                          margin-top: 25px;
+                        }
+                        form .download-btn{
+                          color: #fff;
+                          height: 53px;
+                          width: 100%;
+                          outline: none;
+                          border: none;
+                          font-size: 17px;
+                          font-weight: 500;
+                          cursor: pointer;
+                          margin: 30px 0 20px 0;
+                          border-radius: 5px;
+                          background: #7D2AE8;
+                          pointer-events: none;
+                          transition: background 0.3s ease;
+                        }
+                        .download-btn:hover{
+                          background: #6616d0;
+                        }
+                        @media screen and (max-width: 460px){
+                          body{
+                            padding: 0 20px;
+                          }
+                          form header{
+                            font-size: 24px;
+                          }
+                          .url-input .field,
+                          form .download-btn{
+                            height: 45px;
+                          }
+                          form .download-btn{
+                            font-size: 15px;
+                          }
+                          form .preview-area{
+                            height: 130px;
+                          }
+                          .preview-area .icon{
+                            font-size: 50px;
+                          }
+                          .preview-area span{
+                            margin-top: 10px;
+                            font-size: 12px;
+                          }
+                        }
+                             
+            </code>
+        </deckgo-highlight-code>
+      </div>
+
+      <h2>Conclusion</h2>
+      <p>Congratulations! You have successfully learned how to create a YouTube Video Thumbnail Downloader using
+        HTML, and CSS.</p>
+      <h2>FAQs</h2>
+
+      <h3>Q1: Can I customize the appearance of the YouTube Video Thumbnail Downloader?</h3>
+      <p> Ans. Yes, you can customize the YouTube Video Thumbnail Downloader appearance by modifying the CSS code.
+        Adjust the sizes,
+        colors, and positions to match your website’s design.</p>
+
+
+      <h3>Q2: How can I change the Image of the YouTube Video Thumbnail Downloader?</h3>
+      <p>You can replace the image file in the code with your desired image file. Make sure to
+        update the file name and extension accordingly.</p>
+
+
+      <h3>Q3: Does the YouTube Video Thumbnail Downloader work on all browsers?</h3>
+      <p>Yes, the YouTube Video Thumbnail Downloader should work on most modern web browsers, including Chrome,
+        Firefox, Safari, and Edge.
+      </p>
+
+
+      <h3>Q4: Can I add additional functionality to the YouTube Video Thumbnail Downloader?</h3>
+      <p>Absolutely! You can extend the functionality of the YouTube Video Thumbnail Downloader by adding features
+        such as video downloader,
+        video quality option, thamnail qulity .</p>
+
+
+      <h3>Q5: Is the YouTube Video Thumbnail Downloader will work on Mobile?</h3>
+      <p>Yes, the YouTube Video Thumbnail Downloader is fully responsive and it will work on any device like
+        Mobile, Tablet, and Desktop.
+      </p>
+
+    </div>
+  </div>
+  <div class="download-container">
+    <a href="source code/thumbnail.zip" class="download-btn"><i class="fa fa-download"></i> DOWNLOAD FILE </a>
+  </div>
+  <div class="download-container1">
+    <a href="https://www.youtube.com/@DS_CODER_" class="download-btn1"><i class="fa fa-youtube-play"></i> SUBSCRIBE
+    </a>
+  </div>
+  <div class="download-container1">
+    <h3 style="padding-bottom: 10px;">Share this page on</h3>
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="#" data-a2a-title="@">
+      <a class="a2a_button_copy_link" title="Copy Link"></a>
+      <a class="a2a_button_whatsapp" title="Share On Whatsapp"></a>
+      <a class="a2a_button_facebook" title="Share On Facebook"></a>
+      <a class="a2a_button_twitter" title="Share On Twitter"></a>
+      <a class="a2a_button_linkedin" title="Share On Linkedin"></a>
+      <a class="a2a_button_telegram" title="Share On telegram"></a>
+      <a class="a2a_button_blogger" title="Blogger"></a>
+    </div>
+    <script>
+      var a2a_config = a2a_config || {};
+      a2a_config.onclick = 1;
+      a2a_config.num_services = 4;
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+  </div>
+
+  <section class="light">
+    <div class="container py-2">
+      <h1 class="postcard__title blue" style="text-align: center;">More Recent Post For You</h1>
+
+      <article class="postcard light blue">
+        <a class="postcard__img_link" href="footer.html">
+          <img class="postcard__img" src="img/responsive footer.JPG" alt="Image Title" />
+        </a>
+        <div class="postcard__text t-dark">
+          <div class="type">
+            <li class="type_bg"><a href="html.html">HTML</a></li>
+            <li class="type_bg"><a href="css.html">CSS</a></li>
+          </div>
+          <h1 class="postcard__title blue"><a href="footer.html">Responsive Footer Using Html Css</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              &nbsp;&nbsp;&nbsp;<i class='fa fa-user-circle'></i>&nbsp;&nbsp; By Divakar Rajput
+              <i class="fas fa-calendar-alt mr-2"></i>
+              &nbsp;&nbsp;<i class="	fa fa-calendar"></i>&nbsp;&nbsp; 02 July 2023
+              &nbsp;&nbsp;<i class="	fa fa-clock-o"></i>&nbsp;&nbsp; 10:30PM
+              &nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;&nbsp; 880
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Have you ever wanted to create Responsive footer? In this post,
+            we
+            will learn how to design and implement a responsive footer Form using HTML, and CSS. So, let’s
+            get
+            started!</div>
+          <ul class="postcard__tagbox">
+            <a href="footer.html">
+              <li class="tag__item"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;READ MORE</li>
+            </a>
+            <a href="https://www.youtube.com/@DS_CODER_">
+              <li class="tag__item1"><i class="fa fa-youtube-play"></i>&nbsp;&nbsp;SUBSCRIBE</li>
+            </a>
+          </ul>
+        </div>
+      </article>
+
+      <article class="postcard light blue">
+        <a class="postcard__img_link" href="Analog Clock with Sound in HTML – CSS – JS.html">
+          <img class="postcard__img" src="img/1.png" alt="Image Title" />
+        </a>
+        <div class="postcard__text t-dark">
+          <div class="type">
+            <li class="type_bg"><a href="html.html">HTML</a></li>
+            <li class="type_bg"><a href="css.html">CSS</a></li>
+            <li class="type_bg"><a href="js.html">JavaScript</a></li>
+          </div>
+          <h1 class="postcard__title blue"><a href="Analog Clock with Sound in HTML – CSS – JS.html">Analog
+              Clock with Sound in HTML – CSS – JS</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              &nbsp;&nbsp;&nbsp;<i class='fa fa-user-circle'></i>&nbsp;&nbsp; By Divakar Rajput
+              <i class="fas fa-calendar-alt mr-2"></i>
+              &nbsp;&nbsp;<i class="	fa fa-calendar"></i>&nbsp;&nbsp; 30 Jun 2023
+              &nbsp;&nbsp;<i class="	fa fa-clock-o"></i>&nbsp;&nbsp; 11:02PM
+              &nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;&nbsp; 1k+
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Have you ever wanted to create an analog clock with sound? In
+            this
+            post, we will learn how to design and
+            implement an analog clock with sound using HTML, CSS, and JavaScript.
+            So, let’s get started!</div>
+          <ul class="postcard__tagbox">
+            <a href="Analog Clock with Sound in HTML – CSS – JS.html">
+              <li class="tag__item"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;READ MORE</li>
+            </a>
+            <a href="https://www.youtube.com/@DS_CODER_">
+              <li class="tag__item1"><i class="fa fa-youtube-play"></i>&nbsp;&nbsp;SUBSCRIBE</li>
+            </a>
+          </ul>
+        </div>
+      </article>
+
+
+    </div>
+  </section>
+
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+      <h3>Ds<span>Coder</span></h3>
+
+      <p class="footer-links">
+        <a href="index.html">Home</a>
+        |
+        <a href="wordpress.html">WordPress</a>
+        |
+        <a href="html.html">HTML</a>
+        |
+        <a href="JS.html">JQUERY</a>
+        |
+      </p>
+
+      <p class="footer-company-name">Copyright © 2021 <strong>DS CODER</strong> All rights reserved</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Aligarh (Uttar Pradesh)</span>
+          Aligarh</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 97XXXXX57</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:divakarchauhan9758@gmail.com">Email Click Here</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About the company</span>
+        <strong>DS CODER</strong> is a Youtube channel where you can find more creative HTML, CSS, JQUERY
+        Animations
+        and
+        Effects along with
+        HTML, JavaScript and Projects using C/C++.
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube-play"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
